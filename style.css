@@ -33,7 +33,9 @@ a {
 header {
   position: fixed;
   width: 100%;
-  background-color: #f6e8e5;
+  /* background-color: #f6e8e5; */
+  /* background-color: #769381; */
+  background-color: #9A99AB;
   margin-bottom: 40px;
   padding: 20px 0;
   animation: 1s fadein 0.5s forwards;
@@ -54,6 +56,10 @@ header h2 {
   padding-top: 20px;
 }
 
+header h2 a {
+  color: #fff;
+}
+
 header nav {
   display: flex;
   justify-content: center;
@@ -72,18 +78,36 @@ header nav ul li {
 }
 
 header nav ul li a {
+  position: relative;
+  color: #fff;
   padding: 0 10px;
+}
+
+header nav ul li a:hover {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
 }
 
 /* intro styles */
 .intro {
   padding: 30px 0;
   flex-direction: column;
-  background-color: #f6e8e5;
+  /* background-color: #f6e8e5; */
+  background-color: #9A99AB;
+  color: #fff;
 }
 
 .intro div {
+  opacity: 0;
   padding: 110px 60px;
+  animation: 1.25s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
 }
 
 .intro h1 {
@@ -96,10 +120,30 @@ header nav ul li a {
   padding-left: 60px;
 }
 
+/* portfolio section styles */
+.portfolio {
+  width: 100%;
+}
+
+.projects {
+  margin: 100px 0;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20px;
+}
+
+.image-container img {
+  border: 2px solid red;
+}
+
 /* footer styles */
 footer {
   position: relative;
-  background-color: #333;
+  background-color: #9A99AB;
   color: #fff;
 }
 
@@ -161,6 +205,15 @@ footer a {
     word-wrap: break-word;
     width: 600px;
     font-size: 0.98rem;
+  }
+
+  #portfolio {
+    width: 80%;
+    margin: auto;
+  }
+
+  .project {
+    flex-direction: row;
   }
 
   footer div {
