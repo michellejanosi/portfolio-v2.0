@@ -124,7 +124,7 @@ header nav ul li a:hover {
   width: 100%;
 }
 
-.projects h2, #services h2, #about h2 {
+.projects h2, #services h2, #about h2, #contact h2 {
     margin-left: 40px;
     font-size: 2rem;
 }
@@ -163,7 +163,7 @@ header nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.project .btn {
+.project .btn, form .btn {
   font-size: 0.75em;
   font-weight: 100;
   line-height: 1;
@@ -178,7 +178,7 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-.project .btn:hover {
+.project .btn:hover, form .btn:hover {
   background-color: #33323e;
   color: #fff;
 }
@@ -188,7 +188,7 @@ header nav ul li a:hover {
   width: 100%;
 }
 
-#services h2, #about h2 {
+#services h2, #about h2, #contact h2 {
   margin-bottom: 20px;
 }
 
@@ -243,8 +243,64 @@ header nav ul li a:hover {
   margin-bottom: 40px;
 }
 
-#about .about-container {
+#about .about-container, #contact .contact-container {
   margin: 40px;
+}
+
+/* contacct section styles */
+#contact {
+  width: 100%;
+}
+
+#contact .contact-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  width: 100%;
+  padding-bottom: 40px;
+  margin: 0 40px;
+}
+
+#contact .contact-container p {
+  width: 85%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 40px 0 100px 0;
+}
+
+form .form-control {
+  padding-bottom: 30px;
+}
+
+form .form-control label {
+  display: block;
+  padding-bottom: 10px;
+}
+
+form .form-control input, form .form-control textarea {
+  background-color: #f0f0f0;
+  width: 100%;
+  font-family: inherit;
+  border: none;
+  height: 50px;
+  padding: 15px;
+  letter-spacing: 1px;
+}
+
+form .form-control input::placeholder, form .form-control textarea::placeholder {
+  opacity: 40%;
+  font-size: 0.85rem;
+  letter-spacing: normal;
+}
+
+form .form-control textarea {
+  min-height: 100px;
+  max-height: 180px;
+  resize: vertical;
 }
 
 /* footer styles */
@@ -274,13 +330,13 @@ footer a {
   opacity: 1;
 }
 
-.fa-github, .fa-linkedin {
+.fa-github, .fa-linkedin, .fa-twitter {
   padding-left: 5px;
 }
 
 .fa-angle-up {
   position: absolute;
-  bottom: 37%;
+  bottom: 40%;
   right: 20px;
   font-size: 2rem;
 }
@@ -318,7 +374,7 @@ footer a {
     font-size: 0.98rem;
   }
 
-  #portfolio, #about {
+  #portfolio, #about, #services, #contact {
     width: 80%;
     margin: auto;
   }
@@ -347,11 +403,6 @@ footer a {
     margin-top: 0;
   }
 
-  #services {
-    width: 80%;
-    margin: auto;
-  }
-
   #services ul {
     flex-direction: row;
     justify-content: space-between;
@@ -373,9 +424,22 @@ footer a {
     margin-bottom: 72.5px;
   }
 
+  #contact .contact-container {
+    flex-direction: row;
+  }
+
+  #contact .contact-container p {
+    margin: 8px 70px 70px 0;
+    padding: 30px 0;
+  }
+
   footer div {
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 40px 110px 40px 100px;
+    padding: 40px 180px;
+  }
+
+  footer div .footer-left {
+    margin-top: 10px;
   }
 }
